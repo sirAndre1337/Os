@@ -39,14 +39,14 @@ public class OS {
 	private Cliente cliente;
 
 	public OS() {
-		this.setDataFechamento(LocalDateTime.now());
+		this.setDataAbertura(LocalDateTime.now());
 		this.setPrioridade(Prioridade.BAIXA);
 		this.setStatus(Status.ABERTO);
 	}
 
 	public OS(Long id, Prioridade prioridade, Status status, String observacoes, Tecnico tecnico, Cliente cliente) {
 		this.id = id;
-		this.setDataFechamento(LocalDateTime.now());
+		this.setDataAbertura(LocalDateTime.now());
 		this.prioridade = (prioridade == null) ? 0 : prioridade.getCod();
 		this.status = (status == null) ? 0 : status.getCod();
 		this.observacoes = observacoes;
